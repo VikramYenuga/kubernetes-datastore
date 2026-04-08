@@ -4,4 +4,4 @@ metadata:
   name: datastore-be-cm
 data:
   mysqlHost: mysql
-  mysqlUname: root
+  mysqlUname: admin
