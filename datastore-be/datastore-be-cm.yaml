@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: datastore-be-cm
 data:
-  SPRING_DATASOURCE_URL: jdbc:mysql://database-1.ck9w8awai1i1.us-east-1.rds.amazonaws.com:3306/mydb
+  SPRING_DATASOURCE_URL: jdbc:mysql://database-1.ck9w8awai1i1.us-east-1.rds.amazonaws.com:3306/database-1
   SPRING_DATASOURCE_USERNAME: admin
   SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.MySQL8Dialect
