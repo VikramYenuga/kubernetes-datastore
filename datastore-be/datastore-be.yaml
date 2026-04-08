@@ -20,21 +20,23 @@ spec:
           ports:
             - containerPort: 8084
           env:
-            - name: MYSQL_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: datastore-be-cm
-                  key: mysqlHost
-            - name: MYSQL_USERNAME
-              valueFrom:
-                configMapKeyRef:
-                  name: datastore-be-cm
-                  key: mysqlUname
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: datastore-be-secret
-                  key: mysqlPassword
+  - name: SPRING_DATASOURCE_URL
+    valueFrom:
+      configMapKeyRef:
+        name: datastore-be-cm
+        key: mysqlHost
+
+  - name: SPRING_DATASOURCE_USERNAME
+    valueFrom:
+      configMapKeyRef:
+        name: datastore-be-cm
+        key: mysqlUname
+
+  - name: SPRING_DATASOURCE_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: datastore-be-secret
+        key: mysqlPassword
           resources:
             requests:
               cpu: 100m
