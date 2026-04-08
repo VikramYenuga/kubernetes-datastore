@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: datastore-be-cm
 data:
-  mysqlHost: mysql
+  mysqlHost: database-1.ck9w8awai1i1.us-east-1.rds.amazonaws.com
   mysqlUname: admin
